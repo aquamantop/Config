@@ -3,12 +3,12 @@ server:
 
 spring:
   application:
-    name: api-customer
+    name: movie-service
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/practicaBackend
-    username: springuser
-    password: ThePassword
+    url: jdbc:mysql://localhost:3306/parcialBackEsp
+    username: root
+    password:
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
