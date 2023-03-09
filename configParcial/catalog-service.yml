@@ -4,24 +4,7 @@ server:
 spring:
   application:
     name: catalog-service
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/parcialBackEsp
-    username: root
-    password:
-  jpa:
-    hibernate.ddl-auto: update
-    generate-ddl: true
-    show-sql: true
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    properties:
-      hibernate:
-        format_sql: true
-        jdbc:
-          time_zone: UTC
-  jackson:
-    date-format: yyyy-MM-dd
-
+    
 eureka:
   instance:
     hostname: localhost
