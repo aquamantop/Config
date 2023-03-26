@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: api-customer
+  zipkin:
+    baseUrl: http://localhost:9411/
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/practicaBackend
@@ -31,3 +33,18 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+      
+  zipkin-server-container:
+    image: openzipkin/zipkin-slim
+    container_name: zipkin-server-container
+    environment:
+      - STORAGE_TYPE=mem
+    ports:
+      - "9411:9411"
+    expose:
+      - 9411
+    depends_on:
+      - storage-aux-container
+  storage-aux-container:
+      image: busybox:1.31.0
+      container_name: storage-aux-container
