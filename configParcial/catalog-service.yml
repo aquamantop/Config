@@ -15,8 +15,8 @@ spring:
     
   data:
     mongodb:
-      username: usr-inscription-mongo
-      password: pwd-inscription-mongo
+      username: mongo
+      password: mongo
       database: examen
       port: 27017
       host: localhost
