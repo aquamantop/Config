@@ -17,7 +17,7 @@ spring:
   data:
     mongodb:
       host: localhost
-      database: series
+      database: Series
       port: 27017
   jpa:
     hibernate.ddl-auto: update
